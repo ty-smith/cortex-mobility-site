@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cortex Mobility</title>
+    <meta
+      name="description"
+      content="Cortex Mobility is building intelligent mobility experiences."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#product">Product</a>
+        <a href="#case-study">Case Study</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section id="home" class="hero" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <h1 id="hero-title" class="sr-only">Cortex Mobility</h1>
+          <div class="logo-stage">
+            <img
+              class="logo-stage__image"
+              src="./assets/cortex-mobility-logo.svg"
+              alt="Cortex Mobility"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="product" class="statement" aria-labelledby="statement-title">
+        <div class="statement__inner">
+          <h2 id="statement-title" class="sr-only">Product</h2>
+          <p>
+            Neurometric - the first integrated cart system for pediatric
+            neurology units
+          </p>
+          <img
+            class="statement__image"
+            src="./assets/cortex-mobility-product-page.svg"
+            alt="Neurometric product concept"
+          />
+        </div>
+      </section>
+
+      <section id="case-study" class="case-study" aria-labelledby="case-study-title">
+        <div class="case-study__inner">
+          <div class="case-study__brand">
+            <img
+              class="case-study__logo"
+              src="./assets/phoenix-childrens-logo.svg"
+              alt="Phoenix Children's"
+            />
+            <div class="case-study__brand-plus" aria-hidden="true">+</div>
+            <img
+              class="case-study__logo case-study__logo--asu"
+              src="./assets/asu-logo.svg"
+              alt="Arizona State University"
+            />
+          </div>
+
+          <div class="case-study__copy">
+            <h2 id="case-study-title">Case Study</h2>
+            <p>
+              At Phoenix Children's Hospitals, Cortex Neurometric carts have
+              been in service since 2025. The PCH Neurodiagnostics Team reports
+              that these carts have reduced workload in regards to cable
+              management, organization, workflow during EEG studies, and cart
+              maintenance while decreasing the risk of patients disrupting carts
+              during sleep studies. In particular, the design decreases the
+              footprint of previous carts while enclosing the full breadth of
+              equipment within its protective chassis. This ease of use has
+              improved technician morale and allowed for more valuable time to
+              be spent on patients, rather than on maintenance of the cart
+              itself. Technicians at Phoenix Children's Hospital, particularly
+              those who had recently transitioned from other hospital networks,
+              preferred our carts to the commonly available market competition,
+              preferring the cleaner aesthetic, ease of movement, ease of
+              infection control, streamlined cord management, and supply
+              drawers.
+            </p>
+            <button
+              class="case-study__button"
+              type="button"
+              data-open-whitepaper
+            >
+              Download Case Study
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section" aria-labelledby="contact-title">
+        <div class="contact-section__inner">
+          <div class="contact-section__copy">
+            <h2 id="contact-title">Contact us for questions, orders, and pricing</h2>
+            <button class="contact-section__button" type="button" data-open-contact>
+              Contact
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" data-whitepaper-modal hidden>
+      <div class="modal__backdrop" data-close-whitepaper></div>
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="whitepaper-title"
+      >
+        <button
+          class="modal__close"
+          type="button"
+          aria-label="Close form"
+          data-close-whitepaper
+        >
+          &times;
+        </button>
+
+        <div class="modal__content">
+          <p class="modal__eyebrow">Case Study Access</p>
+          <h2 id="whitepaper-title">Download The Case Study</h2>
+          <p class="modal__intro">
+            Share a few details and download the Cortex Mobility case study.
+          </p>
+
+          <form class="whitepaper-form" data-whitepaper-form>
+            <input type="checkbox" name="botcheck" class="form-botcheck" tabindex="-1" autocomplete="off" />
+
+            <label class="whitepaper-form__field">
+              <span>First name</span>
+              <input type="text" name="firstName" autocomplete="given-name" required />
+            </label>
+
+            <label class="whitepaper-form__field">
+              <span>Last name</span>
+              <input type="text" name="lastName" autocomplete="family-name" required />
+            </label>
+
+            <label class="whitepaper-form__field whitepaper-form__field--full">
+              <span>Company</span>
+              <input type="text" name="company" autocomplete="organization" required />
+            </label>
+
+            <label class="whitepaper-form__field whitepaper-form__field--full">
+              <span>Email</span>
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+
+            <button class="whitepaper-form__submit" type="submit">
+              Download PDF
+            </button>
+
+            <p class="form-status" data-whitepaper-status aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" data-contact-modal hidden>
+      <div class="modal__backdrop" data-close-contact></div>
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="contact-modal-title"
+      >
+        <button
+          class="modal__close"
+          type="button"
+          aria-label="Close contact form"
+          data-close-contact
+        >
+          &times;
+        </button>
+
+        <div class="modal__content">
+          <p class="modal__eyebrow">Contact Cortex Mobility</p>
+          <h2 id="contact-modal-title">Send Us A Message</h2>
+          <p class="modal__intro">
+            Fill out the form below and we'll prepare an email to
+            info@cortex-mobility.com.
+          </p>
+
+          <form class="whitepaper-form" data-contact-form>
+            <input type="checkbox" name="botcheck" class="form-botcheck" tabindex="-1" autocomplete="off" />
+
+            <label class="whitepaper-form__field">
+              <span>First name</span>
+              <input type="text" name="firstName" autocomplete="given-name" required />
+            </label>
+
+            <label class="whitepaper-form__field">
+              <span>Last name</span>
+              <input type="text" name="lastName" autocomplete="family-name" required />
+            </label>
+
+            <label class="whitepaper-form__field whitepaper-form__field--full">
+              <span>Company</span>
+              <input type="text" name="company" autocomplete="organization" required />
+            </label>
+
+            <label class="whitepaper-form__field whitepaper-form__field--full">
+              <span>Email</span>
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+
+            <label class="whitepaper-form__field whitepaper-form__field--full">
+              <span>Comment</span>
+              <textarea name="comment" rows="5" required></textarea>
+            </label>
+
+            <button class="whitepaper-form__submit" type="submit">
+              Send Email
+            </button>
+
+            <p class="form-status" data-contact-status aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
